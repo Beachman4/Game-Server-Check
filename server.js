@@ -36,7 +36,14 @@ Server.prototype.restart = function(app) {
 };
 
 Server.prototype.sendNotification = function(app) {
-    console.log("send some stuff");
+    var data = {
+        from: config.get('email_from'),
+        to: config.get('email_to'),
+        subject: 'Game Server Down',
+        text: 'Game Server' + app.process_name + ' went down and has been restarted.'
+    }
+
+    this.messages().send(data);
 };
 
 var server = new Server();
