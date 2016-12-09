@@ -43,7 +43,7 @@ Server.prototype.sendNotification = function(app) {
         text: 'Game Server' + app.process_name + ' went down and has been restarted.'
     }
 
-    this.messages().send(data);
+    this.mailgun.messages().send(data);
 };
 
 var server = new Server();
