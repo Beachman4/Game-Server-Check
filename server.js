@@ -40,7 +40,7 @@ Server.prototype.sendNotification = function(app) {
         from: config.get('email_from'),
         to: config.get('email_to'),
         subject: 'Game Server Down',
-        text: 'Game Server' + app.process_name + ' went down and has been restarted.'
+        text: 'Game Server ' + app.process_name + ' went down and has been restarted.'
     }
 
     this.mailgun.messages().send(data);
