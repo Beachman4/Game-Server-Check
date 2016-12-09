@@ -4,3 +4,5 @@ This will go through a list of game server processes, check if they are still ru
 
 TODO:
 Make the processes execute on start of script to stop using ps_node as I have to create an .exe to check the specific process name - MAYBE
+
+In the future make it also go through backups and clear the backups that are over a month old.
